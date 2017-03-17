@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>Знакомство с SVG</h1>
+		<p>А так же немного о CSS метододлогиях и фреймфорках</p>
+	</header>
+
+	<section class="slide" id="cover">
+		<img src="pictures/SVG_logo.svg.png" class="place" />
+		<style>
+			#cover img {
+                max-width: 50%;
+            }
+		</style>
+	</section>
+
+    <section class="slide">
+        <h2>Что такое SVG?</h2>
+        <p>
+            <b>SVG</b> (от англ. <b>S</b>calable <b>V</b>ector <b>G</b>raphics — масштабируемая векторная графика) — язык разметки масштабируемой векторной графики.
+        </p>
+    </section>
+
+    <section class="slide">
+        <h2>Что за векторная графика?</h2>
+        <p>
+            <b>Ве́кторная гра́фика</b> — способ представления объектов и изображений в компьютерной графике, основанный на <mark>математическом описании элементарных геометрических объектов</mark>, обычно называемых примитивами, таких как: точки, линии, сплайны, кривые Безье, круги и окружности, многоугольники.
+        </p>
+    </section>    
+
+    <section class="slide">
+        <h2 class="shout">Зачем нам SVG?</h2>
+    </section>
+
+    <section class="slide">
+        <p data-height="500" data-theme-id="0" data-slug-hash="xiLen" data-default-tab="result" data-user="yoksel" data-embed-version="2" data-pen-title="SVG and currentColor" class="codepen place">See the Pen <a href="http://codepen.io/yoksel/pen/xiLen/">SVG and currentColor</a> by yoksel (<a href="http://codepen.io/yoksel">@yoksel</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Что еще умеет SVG?</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Любое изображение в качестве фона</h2>
+    </section>
+
+    <section class="slide">
+        <p data-height="500" data-theme-id="0" data-slug-hash="mfdIE" data-default-tab="result" data-user="yoksel" data-embed-version="2" data-pen-title="SVG icons with patterns" class="codepen place">See the Pen <a href="http://codepen.io/yoksel/pen/mfdIE/">SVG icons with patterns</a> by yoksel (<a href="http://codepen.io/yoksel">@yoksel</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Фантастические эффекты с обводкой</h2>
+    </section>
+
+    <section class="slide">
+        <p data-height="500" data-theme-id="0" data-slug-hash="cmslA" data-default-tab="result" data-user="yoksel" data-embed-version="2" data-pen-title="SVG icons with patterns" class="codepen place">See the Pen <a href="http://codepen.io/yoksel/pen/cmslA">SVG icons with patterns</a> by yoksel (<a href="http://codepen.io/yoksel">@yoksel</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">SVG-фильтры</h2>
+    </section>
+
+    <section class="slide">
+        <p data-height="500" data-theme-id="0" data-slug-hash="kszeJ" data-default-tab="result" data-user="yoksel" data-embed-version="2" data-pen-title="SVG icons with patterns" class="codepen place">See the Pen <a href="http://codepen.io/yoksel/pen/kszeJ">SVG icons with patterns</a> by yoksel (<a href="http://codepen.io/yoksel">@yoksel</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Motion-offset</h2>
+    </section>
+
+    <section class="slide">
+        <article class="example example--motion example--motion-step-2 cover">
+            <div class="plane"></div>
+            <div class="point point--1"></div>
+            <div class="point point--2"></div>
+            <div class="point point--3"></div>
+            <div class="point point--4"></div>
+            <div class="sqr sqr--1"></div>
+            <div class="sqr sqr--2"></div>
+            <div class="label label--1">1</div>
+            <div class="label label--2">2</div>
+            <div class="label label--3">3</div>
+            <div class="label label--4">4</div>
+            <svg width="1200" height="675">
+                <path stroke="white" stroke-dasharray="20, 30" stroke-width="5" fill="none" d="M 300,150 Q 1000,250 1000,550 L 440,400 Q 470,60 900,100 z"/>
+                <path stroke="white" stroke-width="3" d="M 300,150 L 1000,250" />
+                <path stroke="white" stroke-width="3" d="M 440,400 L 470,60" /> 
+            </svg>
+        </article>
+        <style>
+        .example--motion {
+          background: url("pictures/old-map.jpg") 50% 50% no-repeat;
+          background-size: cover;
+        }
+        .example--motion .label {
+          width: 50px;
+          height: 75px;
+          line-height: 75px;
+          text-align: center;
+          color: #000;
+          background-color: #fff;
+          position: absolute;
+          font-size: 36px;
+          opacity: 0.75;
+        }
+        .example--motion .label:after {
+          content: "";
+          display: block;
+          position: absolute;
+          font-size: 0;
+          line-height: 0;
+          overflow: hidden;
+          height: 0;
+          width: 0;
+          border-style: solid;
+        }
+        .example--motion .label--1 {
+          left: 275px;
+          top: 40px;
+        }
+        .example--motion .label--1:after {
+          border-width: 10px 10px 0;
+          border-color: #fff transparent transparent;
+          top: 100%;
+          left: 50%;
+          margin-left: -10px;
+        }
+        .example--motion .label--2 {
+          left: 975px;
+          top: 440px;
+        }
+        .example--motion .label--2:after {
+          border-width: 10px 10px 0;
+          border-color: #fff transparent transparent;
+          top: 100%;
+          left: 50%;
+          margin-left: -10px;
+        }
+        .example--motion .label--3 {
+          left: 415px;
+          top: 440px;
+        }
+        .example--motion .label--3:after {
+          border-width: 0 10px 10px;
+          border-color: transparent transparent #fff;
+          bottom: 100%;
+          left: 50%;
+          margin-left: -10px;
+        }
+        .example--motion .label--4 {
+          left: 875px;
+          top: 140px;
+        }
+        .example--motion .label--4:after {
+          border-width: 0 10px 10px;
+          border-color: transparent transparent #fff;
+          bottom: 100%;
+          left: 50%;
+          margin-left: -10px;
+        }
+        .example--motion .sqr {
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          position: absolute;
+          border-radius: 100%;
+        }
+        .example--motion .sqr--1 {
+          left: 990px;
+          top: 240px;
+        }
+        .example--motion .sqr--2 {
+          left: 460px;
+          top: 50px;
+        }
+        .example--motion .point {
+          width: 40px;
+          height: 40px;
+          border-radius: 100%;
+          position: absolute;
+          box-shadow: inset 0 0 0 4px #fff;
+        }
+        .example--motion .point--1 {
+          left: 280px;
+          top: 130px;
+        }
+        .example--motion .point--2 {
+          left: 980px;
+          top: 530px;
+        }
+        .example--motion .point--3 {
+          left: 420px;
+          top: 380px;
+        }
+        .example--motion .point--4 {
+          left: 880px;
+          top: 80px;
+        }
+        .example--motion .plane {
+          width: 100px;
+          height: 100px;
+          position: absolute;
+          -webkit-transform: rotate(90deg);
+                  transform: rotate(90deg);
+          motion-path: path('M 300,150 Q 1000,250 1000,550 L 440,400 Q 470,60 900,100 z');
+        }
+
+        .example--motion-step-2 .plane {
+          -webkit-animation: planefly 10s infinite linear;
+                  animation: planefly 10s infinite linear;
+          background: url("pictures/plane.png") 50% 50% no-repeat;
+          background-size: contain;
+        }
+
+        @-webkit-keyframes planefly {
+          0% {
+            motion-offset: 0;
+          }
+          100% {
+            motion-offset: 100%;
+          }
+        }
+        @keyframes planefly {
+          0% {
+            motion-offset: 0;
+          }
+          100% {
+            motion-offset: 100%;
+          }
+        }
+        </style>
+    </section>
+    
+    <section class="slide">
+        <h2>Больше примеров можно найти тут:</h2>
+        <p>
+            <a href="http://css.yoksel.ru/svg-decoration/">http://css.yoksel.ru/svg-decoration/</a>
+            <a href="https://tinkoff.ru">https://tinkoff.ru</a>
+            <a href="https://googlechrome.github.io/samples/css-motion-path/">CSS Motion Path Sample (Chrome only)</a>
+            <a href="https://www.youtube.com/watch?v=VoA-aQu75Xk">Доклад: вы не знаете CSS</a>
+            <a href="https://habrahabr.ru/post/207908/">Анимация SVG при помощи D3</a>
+        </p>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout grow">CSS методологии</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Зачем?</h2>
+        <p>Разработчик Бен Фрейн однажды заметил: «Писать CSS-код легко. Масшабировать и поддерживать его — нет».</p>
+    </section>
+
+    <section class="slide">
+        <h2>Популярные методологии</h2>
+        <p>Вот некоторые из них:</p>
+        <ul class="double">
+            <li>БЭМ</li>
+            <li>OOCSS</li>
+            <li>SMACSS</li>
+            <li>Atomic CSS</li>
+            <li>MCSS</li>
+            <li>AMCSS</li>
+            <li>FUN</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>БЭМ</h2>
+        <img src="pictures/dc480903af774eab9370c85e50c8ac72.png" style="max-width:100%;" />
+    </section>
+
+    <section class="slide">
+        <h2>БЭМ</h2>
+        <ul>
+            <li><b>Блоки</b> могут использоваться в нескольких местах сайта;</li>
+            <li><b>Элементы</b> являются частью блока и не имеют функционального смысла вне блока;</li>
+            <li><b>Модификаторы</b> представляют собой свойства блока или элемента, которые меняют его внешний вид или поведение.</li>
+        </ul>
+    </section> 
+
+    <section class="slide">
+        <h2>OOCSS</h2>
+        <img src="pictures/4663e38131c24db99aa009b4a55d3235.png" style="max-width:100%;" />
+    </section>
+
+    <section class="slide">
+        <h2>OOCSS</h2>
+        <ul>
+            <li>Не конкретные правила, а абстрактные рекомендации;</li>
+            <li>Разделение структуры и оформления;</li>
+            <li>Разделение контейнера и контента (содержимого);</li>
+            <li>Уменьшение количества кода за счет повторного его использования (принцип DRY);</li>
+            <li>Достаточно сложная поддержка: при изменении стиля конкретного элемента скорее всего придется менять не только CSS (т.к. большинство классов общие), но и добавлять классы в разметку.</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>SMACSS</h2>
+        <img src="pictures/4dc24a8dc3fb4e758adf89af4f73f66c.png" style="max-width:100%;" />
+    </section>
+
+    <section class="slide">
+        <h2>SMACSS</h2>
+        <ul>
+            <li><b>Base</b> rules — базовые стили;</li>
+            <li><b>Layout</b> rules — стили макета;</li>
+            <li><b>Modules</b> rules — стили модулей, то есть блоков, которые могут использоваться несколько раз на одной странице;</li>
+            <li><b>State</b> rules — стили состояния;</li>
+            <li><b>Theme</b> rules — оформление.</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Atomic CSS</h2>
+        <img src="pictures/b931f475b0984db391f1ae5cad45bced.png" style="max-width:100%;" />
+    </section>
+
+    <section class="slide">
+        <h2>Atomic CSS</h2>
+        <p>При использовании такого подхода для каждого повторно используемого свойства должен быть сформирован отдельный класс. Пример: стиль «margin-top: 1px» предполагает создание класса «mt-1», стиль «width: 200px» создание класса «w-200». </p>
+    </section>
+
+    <section class="slide">
+        <h2>Atomic CSS</h2>
+        <ul>
+            <li>Наименования классов представляют собой описательные названия свойств, не описывая семантическую сущность элемента, что иногда может усложнить разработку;</li>
+            <li>Настройки отображения элементов переносятся непосредственно в HTML;</li>
+            <li>Теоретически, подход может оказаться эффективным для очень больших проектов.</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Multilayer CSS</h2>
+        <img src="pictures/041ae229321745fe88c7205e514e5b90.png" style="max-width:100%;" />
+    </section>
+
+    <section class="slide">
+        <h2>MCSS</h2>
+        <ul>
+            <li><b>Нулевой слой или фундамент</b> — здесь содержится код, отвечающий за сброс стилей браузера (reset.css/normalize.css);</li>
+            <li><b>Базовый слой</b> — включает в себя стили многократно используемых на сайте элементов: кнопок, полей ввода для текста, подсказок и т.п.;</li>
+            <li><b>Проектный слой</b> — включает в себя отдельные модули, а также т.н. «контекст»;</li>
+            <li><b>Косметический слой</b> — в этом разделе находится код, написанный в стиле OOCSS, осуществляющий мелкие изменения в внешнем виде элементов.</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Attribute Modules for CSS</h2>
+        <img src="pictures/9ee1d098849a4b04ad300e32a6d17099.png" style="max-width:100%;" />
+    </section>
+
+    <section class="slide">
+        <h2>AMCSS</h2>
+        <p>Название подхода означает «Модули атрибутов для CSS» (Attribute Modules for CSS). Это достаточно необычный подход, упоминания которого, тем не менее, все чаще встречаются в блогах гуру разработки.</p>
+
+        <p>Если обобщить, этот способ является несколько более человеко-читаемым представлением БЭМ-структуры.</p>
+    </section>
+
+    <section class="slide">
+        <h2>FUN</h2>
+        <img src="pictures/2b34628642c34a839b89a438495f74d0.png" style="max-width:100%;" />
+    </section>
+
+    <section class="slide">
+        <h2>FUN</h2>
+        <p>FUN означает «плоская иерархия селекторов, служебные стили, компоненты с неймспейсами» (Flat hierarchy of selectors, Utility styles, Name-spaced components). За каждой буквой названия стоит определенный принцип:</p>
+        <ul>
+            <li>F, плоская иерархия селекторов;</li>
+            <li>U, служебные классы;</li>
+            <li>N, компоненты с неймспейсами.</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Ссылки:</h2>
+        <p>
+            <a href="https://habrahabr.ru/post/256109/">Способы организации CSS-кода</a>
+            <a href="https://blog.toughbyte.com/blabla-9fd86eae4e6c#.gfsyxcxlg">What’s in a name? A CSS naming convention overview</a>
+        </p>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout grow">CSS фреймфорки</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Все просто</h2>
+        <p>Хочешь быстро &mdash; используй фрейфорки.</p>
+        <p>Хочешь гибко &mdash; пиши сам.</p>
+    </section>
+
+	<footer class="badge">
+		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+	</footer>
+
+	<div class="progress"></div>
+
+	<script src="node_modules/shower-core/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</body>
+</html>
